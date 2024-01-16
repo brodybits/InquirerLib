@@ -10,7 +10,6 @@ from prompt_toolkit.buffer import Buffer
 from prompt_toolkit.completion import CompleteEvent
 from prompt_toolkit.document import Document
 from prompt_toolkit.enums import EditingMode
-from prompt_toolkit.input.defaults import create_pipe_input
 from prompt_toolkit.output import DummyOutput
 from prompt_toolkit.shortcuts.prompt import CompleteStyle
 
@@ -19,10 +18,12 @@ from InquirerPy.prompts.filepath import FilePathCompleter, FilePathPrompt
 from InquirerPy.utils import InquirerPyStyle
 from InquirerPy.validator import PathValidator
 
+from tests.prompts.pipe_input import get_pipe_input
+
 
 class TestFilePath(unittest.TestCase):
     def setUp(self):
-        self.inp = create_pipe_input()
+        self.inp = get_pipe_input()
         self.dirs_to_create = ["dir1", "dir2", "dir3", ".dir"]
         self.files_to_create = ["file1", "file2", "file3", ".file"]
         self.test_dir = Path(tempfile.mkdtemp())

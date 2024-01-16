@@ -3,7 +3,6 @@ from unittest.mock import ANY, call, patch
 
 from prompt_toolkit.buffer import Buffer
 from prompt_toolkit.enums import EditingMode
-from prompt_toolkit.input import create_pipe_input
 from prompt_toolkit.output import DummyOutput
 from prompt_toolkit.shortcuts.prompt import CompleteStyle
 
@@ -13,10 +12,12 @@ from InquirerPy.utils import InquirerPyStyle
 from InquirerPy.validator import PasswordValidator
 from tests.style import get_sample_style
 
+from tests.prompts.pipe_input import get_pipe_input
+
 
 class TestSecret(unittest.TestCase):
     def setUp(self):
-        self.inp = create_pipe_input()
+        self.inp = get_pipe_input()
 
     def tearDown(self):
         self.inp.close()

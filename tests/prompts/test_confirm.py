@@ -10,10 +10,12 @@ from InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
 from InquirerPy.prompts.confirm import ConfirmPrompt
 from InquirerPy.utils import InquirerPyStyle
 
+from tests.prompts.pipe_input import get_pipe_input
+
 
 class TestConfirmPrompt(unittest.TestCase):
     def setUp(self):
-        self.inp = create_pipe_input()
+        self.inp = get_pipe_input()
 
     def tearDown(self):
         self.inp.close()
