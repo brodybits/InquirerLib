@@ -139,3 +139,5 @@ cython_debug/
 sample.txt
 
 .vscode
+
+poetry.lock
