@@ -2,7 +2,7 @@
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 from prompt_toolkit.validation import ValidationError, Validator
 
@@ -178,7 +178,8 @@ class DateValidator(Validator):
     def __init__(
         self,
         message: str = "Invalid date format",
-        formats: list[str] = ["%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S"],
+        # NOTE: Using List from typing as workaround for Python pre-3.9 - would prefer to use built-in list typing instead
+        formats: List[str] = ["%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S"],
     ) -> None:
         self._message = message
         self._formats = formats
