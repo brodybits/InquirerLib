@@ -2,7 +2,7 @@ import urllib.request
 from contextlib import ExitStack
 from pathlib import Path
 
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 
 def get_choices(_):

@@ -1,7 +1,7 @@
 # Skip & KeyboardInterrupt
 
 Prior to version `0.3.0`, the parameter `raise_keyboard_interrupt` can control whether to raise the exception
-{class}`KeyboardInterrupt` when user hit `ctrl-c` or let `InquirerPy` handle the exception which will skip the prompt when
+{class}`KeyboardInterrupt` when user hit `ctrl-c` or let `InquirerLib` handle the exception which will skip the prompt when
 user hit `ctrl-c`. However this would cause issues when user actually want to terminate the program and also will have some side effects
 if future prompts depends on the result.
 
@@ -29,7 +29,7 @@ When `mandator=False` for a prompt, user will be able to skip the prompt. In the
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     questions=[
@@ -57,7 +57,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.select(
     message="Select one:",
@@ -100,7 +100,7 @@ You can directly change the keybinding for raising {class}`KeyboardInterrupt` us
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     questions=[
@@ -121,7 +121,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.select(
     message="Select one:",
@@ -160,7 +160,7 @@ When `raise_keyboard_interrupt` is set to False:
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     questions=[
@@ -181,7 +181,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.select(
     message="Select one:",

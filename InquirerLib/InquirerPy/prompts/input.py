@@ -10,10 +10,10 @@ from prompt_toolkit.lexers import SimpleLexer
 from prompt_toolkit.shortcuts.prompt import CompleteStyle, PromptSession
 from prompt_toolkit.validation import ValidationError
 
-from InquirerPy.base import BaseSimplePrompt
-from InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
-from InquirerPy.exceptions import InvalidArgument
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.base import BaseSimplePrompt
+from InquirerLib.InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
+from InquirerLib.InquirerPy.exceptions import InvalidArgument
+from InquirerLib.InquirerPy.utils import (
     InquirerPyDefault,
     InquirerPyKeybindings,
     InquirerPyMessage,
@@ -58,10 +58,10 @@ class InputPrompt(BaseSimplePrompt):
         invalid_message: Error message to display when user input is invalid.
             Refer to :ref:`pages/validator:Validator` documentation for more details.
         transformer: A function which performs additional transformation on the value that gets printed to the terminal.
-            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:transformer` documentation for more details.
         filter: A function which performs additional transformation on the result.
-            This affects the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            This affects the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:filter` documentation for more details.
         keybindings: Customise the builtin keybindings.
             Refer to :ref:`pages/kb:Keybindings` for more details.
@@ -76,7 +76,7 @@ class InputPrompt(BaseSimplePrompt):
         output: Used internally and will be removed in future updates.
 
     Examples:
-        >>> from InquirerPy import inquirer
+        >>> from InquirerLib.InquirerPy import inquirer
         >>> result = inquirer.text(message="Enter your name:").execute()
         >>> print(f"Name: {result}")
         Name: Michael

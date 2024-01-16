@@ -2,22 +2,22 @@
 
 ```{note}
 Printing values while the prompt is running can cause various side effects. Using the patched print function from
-`InquirerPy` can print the value above the prompt without causing side effects. Mostly useful for debugging.
+`InquirerLib` can print the value above the prompt without causing side effects. Mostly useful for debugging.
 ```
 
-`InquirerPy` provides a helper function {func}`~InquirerPy.utils.patched_print` which can help printing to the terminal
+`InquirerLib` provides a helper function {func}`~InquirerLib.InquirerPy.utils.patched_print` which can help printing to the terminal
 while the prompt is still running.
 
 ```{eval-rst}
-.. autofunction:: InquirerPy.utils.patched_print
+.. autofunction:: InquirerLib.InquirerPy.utils.patched_print
     :noindex:
 ```
 
 The following example will print "Hello World" above the prompt when `alt-b` is pressed.
 
 ```python
-from InquirerPy.utils import patched_print
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy.utils import patched_print
+from InquirerLib.InquirerPy import inquirer
 
 prompt = inquirer.text(message="Name:")
 

@@ -1,7 +1,7 @@
 import os
 
-from InquirerPy import inquirer
-from InquirerPy.validator import PathValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import PathValidator
 
 
 def main():

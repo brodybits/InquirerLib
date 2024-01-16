@@ -1,11 +1,11 @@
 import asyncio
 import unittest
 
-from InquirerPy.base.control import Choice
-from InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
-from InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
-from InquirerPy.prompts.list import InquirerPyListControl
-from InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.base.control import Choice
+from InquirerLib.InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
+from InquirerLib.InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
+from InquirerLib.InquirerPy.prompts.list import InquirerPyListControl
+from InquirerLib.InquirerPy.separator import Separator
 
 
 class TestBaseControl(unittest.TestCase):

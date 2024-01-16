@@ -63,7 +63,7 @@ The `space` key for toggle choice is also disabled since it blocks user from typ
 :end-before: <!-- end list kb -->
 ```
 
-In addition, with the release of [0.3.2](https://github.com/kazhala/InquirerPy/releases/tag/0.3.2), you can now also toggle string matching algorithm.
+In addition, with the release of [0.3.2](https://github.com/brodybits/InquirerLib/releases/tag/0.3.2), you can now also toggle string matching algorithm.
 
 ```{seealso}
 {ref}`pages/prompts/fuzzy:Exact Sub-String match`
@@ -92,7 +92,7 @@ The `default` parameter for this prompt will set the default search text in the 
 If you wish to pre-select certain choices, you can leverage the `enabled` parameter/key of each choice.
 
 ```{code-block} python
-from InquirerPy.base import Choice
+from InquirerLib.InquirerLib.base import Choice
 
 choices = [
     Choice(1, enabled=True),  # enabled by default
@@ -109,7 +109,7 @@ by using the parameter `match_exact`.
   <summary>Classic Syntax (PyInquirer)</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 questions = [
     {
@@ -130,7 +130,7 @@ result = prompt(questions=questions)
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.fuzzy(
     message="Select actions:",
@@ -148,7 +148,7 @@ You can also enable a keybinding to toggle the matching algorithm.
   <summary>Classic Syntax (PyInquirer)</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 questions = [
     {
@@ -168,7 +168,7 @@ result = prompt(questions=questions)
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.fuzzy(
     message="Select actions:",
@@ -182,6 +182,6 @@ result = inquirer.fuzzy(
 ## Reference
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.fuzzy.FuzzyPrompt
+.. autoclass:: InquirerLib.InquirerLib.prompts.fuzzy.FuzzyPrompt
     :noindex:
 ```

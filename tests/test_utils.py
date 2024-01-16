@@ -4,14 +4,14 @@ from unittest.mock import PropertyMock, patch
 
 from prompt_toolkit.application.application import Application
 
-from InquirerPy.exceptions import InvalidArgument
-from InquirerPy.utils import InquirerPyStyle, calculate_height, color_print, get_style
+from InquirerLib.InquirerPy.exceptions import InvalidArgument
+from InquirerLib.InquirerPy.utils import InquirerPyStyle, calculate_height, color_print, get_style
 
 from .style import get_sample_style
 
 
 class TestUtils(unittest.TestCase):
-    @patch("InquirerPy.utils.shutil.get_terminal_size")
+    @patch("InquirerLib.InquirerPy.utils.shutil.get_terminal_size")
     def test_prompt_height(self, mocked_terminal_size):
         mocked_terminal_size.return_value = (24, 80)
         height, max_height = calculate_height(None, None)
@@ -122,8 +122,8 @@ class TestUtils(unittest.TestCase):
             InquirerPyStyle(raw),
         )
 
-    @patch("InquirerPy.utils.print_formatted_text")
-    @patch("InquirerPy.utils.run_in_terminal")
+    @patch("InquirerLib.InquirerPy.utils.print_formatted_text")
+    @patch("InquirerLib.InquirerPy.utils.run_in_terminal")
     @patch.object(Application, "is_running", new_callable=PropertyMock)
     def test_color_print(self, mocked_running, mocked_term, mocked_print):
         mocked_running.return_value = True

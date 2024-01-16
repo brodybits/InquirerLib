@@ -1,6 +1,6 @@
 import asyncio
 
-from InquirerPy import inquirer, prompt_async
+from InquirerLib.InquirerPy import inquirer, prompt_async
 
 
 async def main():

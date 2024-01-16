@@ -1,13 +1,8 @@
-# InquirerPy
+# InquirerLib
 
-[![Test](https://github.com/kazhala/InquirerPy/workflows/Test/badge.svg)](https://github.com/kazhala/InquirerPy/actions?query=workflow%3ATest)
-[![Lint](https://github.com/kazhala/InquirerPy/workflows/Lint/badge.svg)](https://github.com/kazhala/InquirerPy/actions?query=workflow%3ALint)
-[![Build](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUUYyRUIxOXBWZ0hKcUhrbXplQklMemRsTVBxbUk3bFlTdldnRGpxeEpQSXJidEtmVEVzbVNCTE1UR3VoRSt2N0NQV0VaUXlCUzNackFBNzRVUFBBS1FnPSIsIml2UGFyYW1ldGVyU3BlYyI6IloxREtFeWY4WkhxV0NFWU0iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://ap-southeast-2.console.aws.amazon.com/codesuite/codebuild/378756445655/projects/InquirerPy/history?region=ap-southeast-2&builds-meta=eyJmIjp7InRleHQiOiIifSwicyI6e30sIm4iOjIwLCJpIjowfQ)
-[![Coverage](https://img.shields.io/coveralls/github/kazhala/InquirerPy?logo=coveralls)](https://coveralls.io/github/kazhala/InquirerPy?branch=master)
-[![Version](https://img.shields.io/pypi/pyversions/InquirerPy)](https://pypi.org/project/InquirerPy/)
-[![PyPi](https://img.shields.io/pypi/v/InquirerPy)](https://pypi.org/project/InquirerPy/)
+<!-- TODO: UPDATED BADGES -->
 
-Documentation: [inquirerpy.readthedocs.io](https://inquirerpy.readthedocs.io/)
+An updated fork of InquirerPy - see API notice below
 
 <!-- start intro -->
 
@@ -49,14 +44,22 @@ Leveraging [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-tool
 python >= 3.7
 ```
 
-## Getting Started
+## API notice
 
-Checkout full documentation **[here](https://inquirerpy.readthedocs.io/)**.
+Some functions are exported directly using `from InquirerLib`; other functions and all exported objects are within `InquirerLib.InquirerPy` namespace.
+
+**[Documentation for InquirerPy](https://inquirerpy.readthedocs.io/)** applies with these updated imports.
+
+Note that importing from `InquirerLib.InquirerPy.inquirer` is DEPRECATED, as documented below.
+
+Examples in `examples` may be helpful.
+
+## Getting Started
 
 ### Install
 
 ```sh
-pip3 install InquirerPy
+pip install InquirerLib
 ```
 
 ### Quick Start
@@ -64,27 +67,46 @@ pip3 install InquirerPy
 #### Classic Syntax (PyInquirer)
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 questions = [
     {"type": "input", "message": "What's your name:", "name": "name"},
-    {"type": "confirm", "message": "Confirm?", "name": "confirm"},
+    {"type": "confirm", "message": "Confirm?", "name": "confirm", "default": True},
 ]
 result = prompt(questions)
 name = result["name"]
 confirm = result["confirm"]
 ```
 
+NOTE: `default` may be used for any question type.
+
 #### Alternate Syntax
 
-```python
-from InquirerPy import inquirer
+Using individual constructors:
 
-name = inquirer.text(message="What's your name:").execute()
-confirm = inquirer.confirm(message="Confirm?").execute()
+```python
+from InquirerLib.InquirerPy import prompts
+
+name = prompts.InputPrompt(message="What's your name:").execute()
+confirm = prompts.ConfirmPrompt(message="Confirm?", default=True).execute()
 ```
 
+DEPRECATED API:
+
+```python
+from InquirerLib.InquirerPy import inquirer
+
+name = inquirer.text(message="What's your name:").execute()
+confirm = inquirer.confirm(message="Confirm?", default=True).execute()
+```
+
+These are deprecated aliases that may be removed or replaced in the future.
+
 <!-- start migration -->
+
+## Migrating from InquirerPy
+
+Need to update the imports, as described above.
 
 ## Migrating from PyInquirer
 

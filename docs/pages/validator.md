@@ -1,6 +1,6 @@
 # Validator
 
-All `InquirerPy` prompts can validate user input and display an error toolbar when the input or selection is invalid.
+All `InquirerLib` prompts can validate user input and display an error toolbar when the input or selection is invalid.
 
 ## Parameters
 
@@ -12,7 +12,7 @@ Below is an example of ensuring the user doesn't by pass an empty input.
   <summary>Classic Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     [
@@ -32,7 +32,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.text(
     message="Name:",
@@ -49,7 +49,7 @@ Below is another example which ensure that at least 2 options are checked.
   <summary>Classic Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     [
@@ -71,7 +71,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.checkbox(
     message="Select toppings:",
@@ -143,7 +143,7 @@ There's a few pre-built common validator ready to use.
 ### PathValidator
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.validator.PathValidator
+.. autoclass:: InquirerLib.InquirerPy.validator.PathValidator
     :noindex:
 ```
 
@@ -151,8 +151,8 @@ There's a few pre-built common validator ready to use.
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import PathValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import PathValidator
 
 result = prompt(
     [
@@ -171,8 +171,8 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import PathValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import PathValidator
 
 result = inquirer.filepath(message="Enter path:", validate=PathValidator()).execute()
 ```
@@ -182,7 +182,7 @@ result = inquirer.filepath(message="Enter path:", validate=PathValidator()).exec
 ### EmptyInputValidator
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.validator.EmptyInputValidator
+.. autoclass:: InquirerLib.InquirerPy.validator.EmptyInputValidator
     :noindex:
 ```
 
@@ -190,8 +190,8 @@ result = inquirer.filepath(message="Enter path:", validate=PathValidator()).exec
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import EmptyInputValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import EmptyInputValidator
 
 result = prompt(
     [{"type": "input", "message": "Name:", "validate": EmptyInputValidator()}]
@@ -204,8 +204,8 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import EmptyInputValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import EmptyInputValidator
 
 result = inquirer.text(
     message="Name:", validate=EmptyInputValidator("Input should not be empty")
@@ -217,7 +217,7 @@ result = inquirer.text(
 ### PasswordValidator
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.validator.PasswordValidator
+.. autoclass:: InquirerLib.InquirerPy.validator.PasswordValidator
     :noindex:
 ```
 
@@ -225,8 +225,8 @@ result = inquirer.text(
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import PasswordValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import PasswordValidator
 
 result = prompt(
     [
@@ -251,8 +251,8 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import PasswordValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import PasswordValidator
 
 result = inquirer.secret(
     message="New Password:",
@@ -271,7 +271,7 @@ result = inquirer.secret(
 ### NumberValidator
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.validator.NumberValidator
+.. autoclass:: InquirerLib.InquirerPy.validator.NumberValidator
     :noindex:
 ```
 
@@ -279,8 +279,8 @@ result = inquirer.secret(
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import NumberValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 result = prompt(
     [
@@ -301,8 +301,8 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import NumberValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 result = inquirer.text(message="Age:", validate=NumberValidator()).execute()
 ```
@@ -312,7 +312,7 @@ result = inquirer.text(message="Age:", validate=NumberValidator()).execute()
 ### DateValidator
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.validator.DateValidator
+.. autoclass:: InquirerLib.InquirerPy.validator.DateValidator
     :noindex:
 ```
 
@@ -320,8 +320,8 @@ result = inquirer.text(message="Age:", validate=NumberValidator()).execute()
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import DateValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import DateValidator
 
 result = prompt(
     [
@@ -343,8 +343,8 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import NumberValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 result = inquirer.text(message="Date of birth:", validate=DateValidator()).execute()
 ```

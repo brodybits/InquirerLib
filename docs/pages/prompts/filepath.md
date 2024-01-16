@@ -54,7 +54,7 @@ If you wish to support ENV variables completion, look into `prompt_toolkit` [doc
 and create a custom completion class. Directly use the {ref}`pages/prompts/input:InputPrompt` with the parameter `completer`.
 
 ```{seealso}
-{class}`InquirerPy.prompts.filepath.FilePathCompleter`
+{class}`InquirerLib.prompts.filepath.FilePathCompleter`
 ```
 
 ## Excluding File Types
@@ -73,6 +73,6 @@ files or directories in the completion.
 ## Reference
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.filepath.FilePathPrompt
+.. autoclass:: InquirerLib.InquirerLib.prompts.filepath.FilePathPrompt
     :noindex:
 ```

@@ -4,18 +4,18 @@ A `PyInquirer <https://github.com/CITGuru/PyInquirer>`_ compatible entrypoint :f
 """
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
-from InquirerPy.prompts.checkbox import CheckboxPrompt
-from InquirerPy.prompts.confirm import ConfirmPrompt
-from InquirerPy.prompts.expand import ExpandPrompt
-from InquirerPy.prompts.filepath import FilePathPrompt
-from InquirerPy.prompts.fuzzy import FuzzyPrompt
-from InquirerPy.prompts.input import InputPrompt
-from InquirerPy.prompts.list import ListPrompt
-from InquirerPy.prompts.number import NumberPrompt
-from InquirerPy.prompts.rawlist import RawlistPrompt
-from InquirerPy.prompts.secret import SecretPrompt
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
+from InquirerLib.InquirerPy.prompts.checkbox import CheckboxPrompt
+from InquirerLib.InquirerPy.prompts.confirm import ConfirmPrompt
+from InquirerLib.InquirerPy.prompts.expand import ExpandPrompt
+from InquirerLib.InquirerPy.prompts.filepath import FilePathPrompt
+from InquirerLib.InquirerPy.prompts.fuzzy import FuzzyPrompt
+from InquirerLib.InquirerPy.prompts.input import InputPrompt
+from InquirerLib.InquirerPy.prompts.list import ListPrompt
+from InquirerLib.InquirerPy.prompts.number import NumberPrompt
+from InquirerLib.InquirerPy.prompts.rawlist import RawlistPrompt
+from InquirerLib.InquirerPy.prompts.secret import SecretPrompt
+from InquirerLib.InquirerPy.utils import (
     InquirerPyKeybindings,
     InquirerPyQuestions,
     InquirerPySessionResult,
@@ -156,8 +156,8 @@ def prompt(
         InvalidArgument: When the provided `questions` argument is not a type of :class:`list` nor :class:`dictionary`.
 
     Examples:
-        >>> from InquirerPy import prompt
-        >>> from InquirerPy.validator import NumberValidator
+        >>> InquirerLib import prompt
+        >>> InquirerLib.InquirerPy.validator import NumberValidator
         >>> questions = [
         ...     {
         ...         "type": "input",

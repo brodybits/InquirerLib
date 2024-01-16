@@ -1,4 +1,4 @@
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 
 def main():

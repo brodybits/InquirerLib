@@ -1,5 +1,5 @@
-from InquirerPy import inquirer
-from InquirerPy.validator import PasswordValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import PasswordValidator
 
 original_password = "InquirerPy45@"
 

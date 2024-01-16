@@ -1,6 +1,6 @@
 # Separator
 
-You can use {class}`~InquirerPy.separator.Separator` to effectively group {ref}`pages/dynamic:choices` visually in the
+You can use {class}`~InquirerLib.InquirerPy.separator.Separator` to effectively group {ref}`pages/dynamic:choices` visually in the
 following types of prompts which involves list of choices:
 
 - {ref}`pages/prompts/list:ListPrompt`
@@ -9,7 +9,7 @@ following types of prompts which involves list of choices:
 - {ref}`pages/prompts/checkbox:CheckboxPrompt`
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.separator.Separator
+.. autoclass:: InquirerLib.InquirerPy.separator.Separator
     :noindex:
 ```
 
@@ -25,9 +25,9 @@ following types of prompts which involves list of choices:
   us-east-1
   us-east-2
 """
-from InquirerPy import prompt
-from InquirerPy.base.control import Choice
-from InquirerPy.separator import Separator
+from InquirerLib import prompt
+from InquirerLib.InquirerLib.base.control import Choice
+from InquirerLib.InquirerPy.separator import Separator
 
 result = prompt(
     questions=[
@@ -62,9 +62,9 @@ result = prompt(
   us-east-1
   us-east-2
 """
-from InquirerPy import inquirer
-from InquirerPy.base.control import Choice
-from InquirerPy.separator import Separator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerLib.base.control import Choice
+from InquirerLib.InquirerPy.separator import Separator
 
 region = inquirer.select(
     message="Select regions:",

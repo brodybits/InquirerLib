@@ -10,7 +10,7 @@ There's mainly two categories: [Before Rendered](#before-rendered) and [After An
 Parameters/Keys in this category will be retrieved before the prompt is displayed in the terminal. The main purpose of this category
 is to allow {ref}`index:Classic Syntax (PyInquirer)` users to customise the prompt based on previous prompts result.
 
-When these parameters/keys receive function/callable as an argument, the current `InquirerPySessionResult` will be provided as an argument and you can
+When these parameters/keys receive function/callable as an argument, the current `InquirerLibSessionResult` will be provided as an argument and you can
 perform additional logic to generate and return different values.
 
 ### Classic Syntax (PyInquirer)
@@ -20,8 +20,8 @@ Let's take the `message` and `default` key as an example, in certain scenario, y
 In the following example, the second prompt will set the `default` value based on the result from the first prompt. And the third prompt will display the `message` based on the result from second prompt.
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import NumberValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 def get_message(result):
     return f"Hi {result['confirm_name']}, enter your age:"
@@ -55,8 +55,8 @@ When using {ref}`pages/inquirer:inquirer`, you will receive the result immediate
 perform your logic to generate the parameters dynamically after each prompt execution.
 
 ```
-from InquirerPy import inquirer
-from InquirerPy.validator import NumberValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 name = inquirer.text(message="Name:").execute()
 confirm_name = inquirer.text(message="Confirm Name:", default=name).execute()
@@ -78,8 +78,8 @@ The following is not a good example that make the code shorter or cleaner..but i
 ```
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import NumberValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 name = inquirer.text(message="Name:").execute()
 confirm_name = inquirer.text(message="Confirm Name:", default=lambda _:name).execute()
@@ -93,7 +93,7 @@ age = inquirer.text(
 #### message
 
 ```
-Union[str, Callable[["InquirerPySessionResult"], str]]
+Union[str, Callable[["InquirerLibSessionResult"], str]]
 ```
 
 ```{admonition} Category
@@ -111,7 +111,7 @@ The `message` parameter/key can either be a simple {class}`string` or a function
 #### default
 
 ```
-Union[Any, Callable[["InquirerPySessionResult"], Any]]
+Union[Any, Callable[["InquirerLibSessionResult"], Any]]
 ```
 
 ```{admonition} Category
@@ -160,7 +160,7 @@ in individual prompt documentation with additional customised Choice classes.
 ```
 
 ```{tip}
-It is recommended to use the {class}`~InquirerPy.base.control.Choice` class over using {class}`dict`.
+It is recommended to use the {class}`~InquirerLib.base.control.Choice` class over using {class}`dict`.
 ```
 
 Each choice can be the following types:
@@ -171,10 +171,10 @@ Each choice can be the following types:
   - value (Any): The value of the choice when user selects this choice.
   - name (str): The value that should be presented to the user prior/after selection of the choice.
   - enabled (bool): Indicates if the choice should be pre-selected. This only has effects when the prompt has `multiselect` enabled.
-- **{class}`~InquirerPy.base.control.Choice`**: An instance of the `Choice` class.
+- **{class}`~InquirerLib.base.control.Choice`**: An instance of the `Choice` class.
 
   ```{eval-rst}
-  .. autoclass:: InquirerPy.base.control.Choice
+  .. autoclass:: InquirerLib.InquirerLib.base.control.Choice
       :noindex:
   ```
 
@@ -182,9 +182,9 @@ Each choice can be the following types:
   <summary>Classic Syntax (PyInquirer)</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
-from InquirerPy.base.control import Choice
-from InquirerPy.separator import Separator
+from InquirerLib import prompt
+from InquirerLib.InquirerLib.base.control import Choice
+from InquirerLib.InquirerPy.separator import Separator
 
 questions = [
     {
@@ -211,9 +211,9 @@ result = prompt(questions=questions)
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
-from InquirerPy.base.control import Choice
-from InquirerPy.separator import Separator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerLib.base.control import Choice
+from InquirerLib.InquirerPy.separator import Separator
 
 region = inquirer.select(
     message="Select regions:",
@@ -253,7 +253,7 @@ For prompts that accepts parameter `choices`, the value provided to the filter f
 of the selected choice (`choice["value"]`) or a list of values of the selected choices.
 ```
 
-A function which performs additional transformation on the result. This affects the actual value returned by {meth}`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+A function which performs additional transformation on the result. This affects the actual value returned by {meth}`~InquirerLib.base.simple.BaseSimplePrompt.execute`.
 
 Leveraging this parameter/key can potentially shorten the code and create a cleaner code base. Given a scenario you want to obtain the age from the user, however the result
 from {ref}`pages/prompts/input:InputPrompt` is type of {class}`string` by default. You can use the `filter` parameter/key to convert them to {class}`int`.
@@ -262,8 +262,8 @@ from {ref}`pages/prompts/input:InputPrompt` is type of {class}`string` by defaul
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy.validator import NumberValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 questions = [
     {
@@ -283,8 +283,8 @@ result = prompt(questions=questions)
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy.validator import NumberValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 age = inquirer.text(
     message="Age:", filter=lambda result: int(result), validate=NumberValidator()
@@ -317,7 +317,7 @@ of the selected choice (`choice["name"]`) or a list of names of the selected cho
 ```
 
 A function which performs additional transformation on the value that gets printed to the terminal.
-Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by {meth}`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by {meth}`~InquirerLib.base.simple.BaseSimplePrompt.execute`.
 
 For example, when working with {ref}`pages/prompts/checkbox:CheckboxPrompt`, all user selected choices will be displayed in the terminal. This may create
 unnecessary clutter of texts and may cause the displayed information become less useful. You can use `transformer` parameter/key to change how the result will be printed.
@@ -330,8 +330,8 @@ unnecessary clutter of texts and may cause the displayed information become less
 Without transformer: ? Select regions: ["us-east-1", "us-west-1"]
 With transformer: ? Select regions: 2 regions selected
 """
-from InquirerPy import prompt
-from InquirerPy.base.control import Choice
+from InquirerLib import prompt
+from InquirerLib.InquirerLib.base.control import Choice
 
 choices = [
     Choice("ap-southeast-2", name="Sydney", enabled=True),
@@ -363,8 +363,8 @@ result = prompt(questions=questions)
 Without transformer: ? Select regions: ["us-east-1", "us-west-1"]
 With transformer: ? Select regions: 2 regions selected
 """
-from InquirerPy import inquirer
-from InquirerPy.base.control import Choice
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerLib.base.control import Choice
 
 choices = [
     Choice("ap-southeast-2", name="Sydney", enabled=True),

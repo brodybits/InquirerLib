@@ -21,9 +21,9 @@ from prompt_toolkit.keys import Keys
 from prompt_toolkit.styles.style import Style
 from prompt_toolkit.validation import Validator
 
-from InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
-from InquirerPy.exceptions import RequiredKeyNotFound
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
+from InquirerLib.InquirerPy.exceptions import RequiredKeyNotFound
+from InquirerLib.InquirerPy.utils import (
     InquirerPyMessage,
     InquirerPySessionResult,
     InquirerPyStyle,
@@ -126,8 +126,8 @@ class BaseSimplePrompt(ABC):
         """Register all keybindings in `self._kb_maps`.
 
         It's required to call this function at the end of prompt constructor if
-        it inherits from :class:`~InquirerPy.base.simple.BaseSimplePrompt` or
-        :class:`~InquirerPy.base.complex.BaseComplexPrompt`.
+        it inherits from :class:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt` or
+        :class:`~InquirerLib.InquirerPy.base.complex.BaseComplexPrompt`.
         """
 
         def _factory(keys, filter, action):

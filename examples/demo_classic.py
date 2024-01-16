@@ -1,9 +1,9 @@
 # NOTE: Following example requires boto3 package.
 import boto3
 
-from InquirerPy import prompt
-from InquirerPy.exceptions import InvalidArgument
-from InquirerPy.validator import PathValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.exceptions import InvalidArgument
+from InquirerLib.InquirerPy.validator import PathValidator
 
 client = boto3.client("s3")
 

@@ -1,4 +1,4 @@
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 
 def main():

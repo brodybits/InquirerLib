@@ -9,10 +9,10 @@
 Yes, especially for list type prompts with multiple selection, printing selection
 as a list is not ideal in a lot of scenarios. Use `transformer` parameter to customise it.
 
-## How can I do unittest when using `InquirerPy`?
+## How can I do unittest when using `InquirerLib`?
 
 ```{tip}
-Since `InquirerPy` module itself is tested, there's no need to mock any further/deeper than the API entrypoint (`prompt` and `inquirer`).
+Since `InquirerLib` module itself is tested, there's no need to mock any further/deeper than the API entrypoint (`prompt` and `inquirer`).
 ```
 
 For {ref}`index:Classic Syntax (PyInquirer)` user, it would be just a direct mock on the {ref}`pages/prompt:prompt` function.
@@ -21,7 +21,7 @@ For {ref}`index:Classic Syntax (PyInquirer)` user, it would be just a direct moc
 ---
 caption: Module/somefunction.py
 ---
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 def get_name():
     return prompt({"type": "input", "message": "Name:"})
@@ -50,7 +50,7 @@ For {ref}`index:Alternate Syntax` user, you'd have to mock 1 level deeper to the
 ---
 caption: Module/somefunction.py
 ---
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 def get_name():
     return inquirer.text(message="Name:").execute()

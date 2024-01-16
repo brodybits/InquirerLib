@@ -8,10 +8,10 @@ from prompt_toolkit.application.application import Application
 from prompt_toolkit.buffer import Buffer
 from prompt_toolkit.layout.layout import Layout
 
-from InquirerPy.base.complex import BaseComplexPrompt
-from InquirerPy.base.control import Choice
-from InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
-from InquirerPy.prompts.fuzzy import FuzzyPrompt, InquirerPyFuzzyControl
+from InquirerLib.InquirerPy.base.complex import BaseComplexPrompt
+from InquirerLib.InquirerPy.base.control import Choice
+from InquirerLib.InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
+from InquirerLib.InquirerPy.prompts.fuzzy import FuzzyPrompt, InquirerPyFuzzyControl
 
 
 class AsyncMock(MagicMock):
@@ -32,7 +32,7 @@ class TestFuzzy(unittest.TestCase):
         match_exact=False,
     )
 
-    @patch("InquirerPy.utils.shutil.get_terminal_size")
+    @patch("InquirerLib.InquirerPy.utils.shutil.get_terminal_size")
     def setUp(self, mocked_term):
         mocked_term.return_value = (24, 80)
         self.prompt = FuzzyPrompt(
@@ -341,9 +341,9 @@ class TestFuzzy(unittest.TestCase):
             ],
         )
 
-    @patch("InquirerPy.prompts.fuzzy.InquirerPyFuzzyControl")
-    @patch("InquirerPy.prompts.fuzzy.calculate_height")
-    @patch("InquirerPy.utils.shutil.get_terminal_size")
+    @patch("InquirerLib.InquirerPy.prompts.fuzzy.InquirerPyFuzzyControl")
+    @patch("InquirerLib.InquirerPy.prompts.fuzzy.calculate_height")
+    @patch("InquirerLib.InquirerPy.utils.shutil.get_terminal_size")
     def test_constructor(self, mocked_term, mocked_height, mocked_control):
         mocked_term.return_value = (24, 80)
         mocked_height.return_value = (80, 80)

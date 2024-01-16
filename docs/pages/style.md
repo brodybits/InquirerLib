@@ -1,6 +1,6 @@
 # Style
 
-Each `InquirerPy` prompt contains several [components](#components) which you can
+Each `InquirerLib` prompt contains several [components](#components) which you can
 [customise](#customising-style) the style.
 
 ## Customising Style
@@ -12,13 +12,13 @@ Checkout [Default Style](#default-style) for all available style classes to cust
 ### Classic Syntax (PyInquirer)
 
 ```{tip}
-`InquirerPy` also supports style customisation via ENV variables. Checkout {ref}`ENV <pages/env:Style>` documentation.
+`InquirerLib` also supports style customisation via ENV variables. Checkout {ref}`ENV <pages/env:Style>` documentation.
 ```
 
 The entry point function {ref}`pages/prompt:prompt` has a parameter `style` which you can use to apply custom styling using {class}`dict`.
 
 ```
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     {"message": "Confirm order?", "type": "confirm", "default": False},
@@ -31,7 +31,7 @@ result = prompt(
 The parameter `style_override` can be used to remove all [Default Style](#default-style). Value is `True` by default.
 
 ```
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     {"message": "Confirm order?", "type": "confirm", "default": False},
@@ -44,10 +44,10 @@ result = prompt(
 ### Alternate Syntax
 
 ```{eval-rst}
-When using the :ref:`index:Alternate Syntax`, each `prompt` class requires a :class:`~InquirerPy.utils.InquirerPyStyle` instance instead of a dictionary. You can get
-this object by using :func:`~InquirerPy.utils.get_style`.
+When using the :ref:`index:Alternate Syntax`, each `prompt` class requires a :class:`~InquirerLib.InquirerPy.utils.InquirerLibStyle` instance instead of a dictionary. You can get
+this object by using :func:`~InquirerLib.InquirerPy.utils.get_style`.
 
-.. autofunction:: InquirerPy.utils.get_style
+.. autofunction:: InquirerLib.InquirerPy.utils.get_style
   :noindex:
 ```
 

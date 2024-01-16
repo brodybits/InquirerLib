@@ -3,15 +3,15 @@ from typing import Any, Callable, List, Optional, Tuple, Union
 
 from prompt_toolkit.validation import ValidationError
 
-from InquirerPy.base import FakeDocument, InquirerPyUIListControl
-from InquirerPy.enum import (
+from InquirerLib.InquirerPy.base import FakeDocument, InquirerPyUIListControl
+from InquirerLib.InquirerPy.enum import (
     INQUIRERPY_EMPTY_CIRCLE_SEQUENCE,
     INQUIRERPY_FILL_CIRCLE_SEQUENCE,
     INQUIRERPY_POINTER_SEQUENCE,
 )
-from InquirerPy.prompts.list import ListPrompt
-from InquirerPy.separator import Separator
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.prompts.list import ListPrompt
+from InquirerLib.InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.utils import (
     InquirerPyKeybindings,
     InquirerPyListChoices,
     InquirerPyMessage,
@@ -135,10 +135,10 @@ class CheckboxPrompt(ListPrompt):
         invalid_message: Error message to display when user input is invalid.
             Refer to :ref:`pages/validator:Validator` documentation for more details.
         transformer: A function which performs additional transformation on the value that gets printed to the terminal.
-            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:transformer` documentation for more details.
         filter: A function which performs additional transformation on the result.
-            This affects the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            This affects the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:filter` documentation for more details.
         height: Preferred height of the prompt.
             Refer to :ref:`pages/height:Height` documentation for more details.
@@ -158,7 +158,7 @@ class CheckboxPrompt(ListPrompt):
         session_result: Used internally for :ref:`index:Classic Syntax (PyInquirer)`.
 
     Examples:
-        >>> from InquirerPy import inquirer
+        >>> from InquirerLib.InquirerPy import inquirer
         >>> result = inquirer.checkbox(message="Select:", choices=[1, 2, 3]).execute()
         >>> print(result)
         [1]

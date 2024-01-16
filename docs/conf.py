@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath("."))
 
-project = "InquirerPy"
+project = "InquirerLib"
 copyright = "2021, Kevin Zhuang"
 author = "Kevin Zhuang"
 version = "0.3.4"
@@ -24,7 +24,7 @@ templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = "furo"
-html_title = "InquirerPy"
+html_title = "InquirerLib"
 
 napoleon_include_init_with_doc = True
 autosectionlabel_prefix_document = True

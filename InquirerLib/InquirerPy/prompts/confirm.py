@@ -6,9 +6,9 @@ from prompt_toolkit.keys import Keys
 from prompt_toolkit.shortcuts import PromptSession
 from prompt_toolkit.validation import ValidationError
 
-from InquirerPy.base import BaseSimplePrompt
-from InquirerPy.exceptions import InvalidArgument
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.base import BaseSimplePrompt
+from InquirerLib.InquirerPy.exceptions import InvalidArgument
+from InquirerLib.InquirerPy.utils import (
     InquirerPyDefault,
     InquirerPyKeybindings,
     InquirerPyMessage,
@@ -43,10 +43,10 @@ class ConfirmPrompt(BaseSimplePrompt):
         instruction: Short instruction to display next to the question.
         long_instruction: Long instructions to display at the bottom of the prompt.
         transformer: A function which performs additional transformation on the value that gets printed to the terminal.
-            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:transformer` documentation for more details.
         filter: A function which performs additional transformation on the result.
-            This affects the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            This affects the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:filter` documentation for more details.
         keybindings: Customise the builtin keybindings.
             Refer to :ref:`pages/kb:Keybindings` for more details.
@@ -64,7 +64,7 @@ class ConfirmPrompt(BaseSimplePrompt):
         output: Used internally and will be removed in future updates.
 
     Examples:
-        >>> from InquirerPy import inquirer
+        >>> from InquirerLib.InquirerPy import inquirer
         >>> result = inquirer.confirm(message="Confirm?").execute()
         >>> print(result)
         True

@@ -5,10 +5,10 @@ from prompt_toolkit.enums import EditingMode
 from prompt_toolkit.key_binding.key_bindings import KeyBindings
 from prompt_toolkit.styles.style import Style
 
-from InquirerPy.base.control import Choice
-from InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
-from InquirerPy.prompts.checkbox import CheckboxPrompt, InquirerPyCheckboxControl
-from InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.base.control import Choice
+from InquirerLib.InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
+from InquirerLib.InquirerPy.prompts.checkbox import CheckboxPrompt, InquirerPyCheckboxControl
+from InquirerLib.InquirerPy.separator import Separator
 
 
 class TestCheckbox(unittest.TestCase):

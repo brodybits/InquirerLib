@@ -12,7 +12,7 @@ This document is irrelevant if you intend to use the {ref}`index:Classic Syntax 
 This page documents the usage of `inquirer`.
 
 ```{eval-rst}
-.. automodule:: InquirerPy.inquirer
+.. automodule:: InquirerLib.InquirerPy.inquirer
     :noindex:
 ```
 
@@ -35,7 +35,7 @@ individual prompt documentation for prompt specific usage.
 Each prompt contains a function `execute` to start the prompt.
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 def main():
   result = inquirer.text(message="Name:").execute()
@@ -50,7 +50,7 @@ Each prompt contains a function `execute_async` to start the prompt asynchronous
 
 ```{code-block} python
 import asyncio
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 async def main():
   result = await inquirer.text(message="Name:").execute_async()

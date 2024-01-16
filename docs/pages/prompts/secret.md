@@ -48,6 +48,6 @@ There are no additional keybindings created for this prompt besides the default 
 ## Reference
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.secret.SecretPrompt
+.. autoclass:: InquirerLib.InquirerLib.prompts.secret.SecretPrompt
     :noindex:
 ```

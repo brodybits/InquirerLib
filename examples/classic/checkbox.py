@@ -1,6 +1,6 @@
-from InquirerPy import prompt
-from InquirerPy.base import Choice
-from InquirerPy.separator import Separator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.base import Choice
+from InquirerLib.InquirerPy.separator import Separator
 
 question1_choice = [
     Separator(),

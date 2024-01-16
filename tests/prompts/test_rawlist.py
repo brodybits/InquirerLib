@@ -1,11 +1,11 @@
 import unittest
 from unittest.mock import ANY, call, patch
 
-from InquirerPy.base import BaseComplexPrompt
-from InquirerPy.base.control import Choice
-from InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
-from InquirerPy.prompts.rawlist import InquirerPyRawlistControl, RawlistPrompt
-from InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.base import BaseComplexPrompt
+from InquirerLib.InquirerPy.base.control import Choice
+from InquirerLib.InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
+from InquirerLib.InquirerPy.prompts.rawlist import InquirerPyRawlistControl, RawlistPrompt
+from InquirerLib.InquirerPy.separator import Separator
 
 
 class TestRawList(unittest.TestCase):

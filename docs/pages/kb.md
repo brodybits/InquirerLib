@@ -1,6 +1,6 @@
 # Keybindings
 
-By default, `InquirerPy` will use most of the standard `emacs` navigation keybindings. You
+By default, `InquirerLib` will use most of the standard `emacs` navigation keybindings. You
 can easily switch to `vim` keybindings by setting the parameter [vi_mode](#using-vim-keybindings) to `True`.
 
 You can customise the keybindings even further by utilising the parameter [keybindings](#customizing-keybindings).
@@ -45,10 +45,10 @@ Please checkout the individual prompt documentation for the available actions an
 ## Using VIM Keybindings
 
 ```{tip}
-All `InquirerPy` prompts accepts a boolean parameter `vi_mode`.
+All `InquirerLib` prompts accepts a boolean parameter `vi_mode`.
 ```
 
-`InquirerPy` comes with `vim` keybinding preset. After setting `vi_mode=True`, the input buffer (text fields) will behave the same as
+`InquirerLib` comes with `vim` keybinding preset. After setting `vi_mode=True`, the input buffer (text fields) will behave the same as
 if you enable the `vi` mode in [readline/bash](https://www.gnu.org/software/bash/manual/html_node/Readline-vi-Mode.html).
 Other keybinding will also have different effects (e.g. `up/down` will change from `ctrl-n/ctrl-p` to `j/k`), refer to individual
 prompt documentation for more information.
@@ -57,7 +57,7 @@ prompt documentation for more information.
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(
     questions=[
@@ -77,7 +77,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 result = inquirer.select(
     message="Select one:",
@@ -124,7 +124,7 @@ In the following example:
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 keybindings = {
     "skip": [{"key": "c-c"}],
@@ -151,7 +151,7 @@ result = prompt(
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 keybindings = {
     "skip": [{"key": "c-c"}],
@@ -250,14 +250,14 @@ the `execute` function immediately, you can bind keys to your custom functions b
 This method directly interacts with {meth}`prompt_toolkit.key_binding.KeyBindings.add`.
 ```
 
-{meth}`~InquirerPy.base.simple.BaseSimplePrompt.register_kb` is a decorator function that's available to use once the prompt is created.
+{meth}`~InquirerLib.base.simple.BaseSimplePrompt.register_kb` is a decorator function that's available to use once the prompt is created.
 The function that are being bounded will be provided with an object {class}`~prompt_toolkit.key_binding.key_processor.KeyPressEvent` as an argument.
 
 The {class}`~prompt_toolkit.key_binding.key_processor.KeyPressEvent` can give you access to the {class}`~prompt_toolkit.application.Application` which
 will provide you with the ability to exit the prompt application with custom result.
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 prompt = inquirer.select(
     message="Select item:",
@@ -280,7 +280,7 @@ result = prompt.execute()
 There are also some internal APIs you could leverage within the keybinding functions.
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 prompt = inquirer.select(
     message="Select item:",
@@ -306,8 +306,8 @@ result = prompt.execute()
 The following is a simpler example which will print "Hello World" on top of the prompt when pressing `alt-a`.
 
 ```{code-block} python
-from InquirerPy import inquirer
-from InquirerPy.utils import patched_print as print
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.utils import patched_print as print
 
 name_prompt = inquirer.text(message="Name:")
 

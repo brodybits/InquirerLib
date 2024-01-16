@@ -1,5 +1,5 @@
-from InquirerPy import prompt
-from InquirerPy.validator import EmptyInputValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import EmptyInputValidator
 
 
 def main() -> None:

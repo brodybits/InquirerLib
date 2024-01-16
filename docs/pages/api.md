@@ -3,91 +3,91 @@
 ## prompt
 
 ```{eval-rst}
-.. automodule:: InquirerPy.resolver
+.. automodule:: InquirerLib.InquirerPy.resolver
     :members:
 ```
 
 ### input
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.input
+.. automodule:: InquirerLib.InquirerLib.prompts.input
     :members:
 ```
 
 ### secret
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.secret
+.. automodule:: InquirerLib.InquirerLib.prompts.secret
     :members:
 ```
 
 ### filepath
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.filepath
+.. automodule:: InquirerLib.InquirerLib.prompts.filepath
     :members:
 ```
 
 ### confirm
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.confirm
+.. automodule:: InquirerLib.InquirerLib.prompts.confirm
     :members:
 ```
 
 ### list
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.list
+.. automodule:: InquirerLib.InquirerLib.prompts.list
     :members:
 ```
 
 ### rawlist
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.rawlist
+.. automodule:: InquirerLib.InquirerLib.prompts.rawlist
     :members:
 ```
 
 ### expand
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.expand
+.. automodule:: InquirerLib.InquirerLib.prompts.expand
     :members:
 ```
 
 ### checkbox
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.checkbox
+.. automodule:: InquirerLib.InquirerLib.prompts.checkbox
     :members:
 ```
 
 ### fuzzy
 
 ```{eval-rst}
-.. automodule:: InquirerPy.prompts.fuzzy
+.. automodule:: InquirerLib.InquirerLib.prompts.fuzzy
     :members:
 ```
 
 ## separator
 
 ```{eval-rst}
-.. automodule:: InquirerPy.separator
+.. automodule:: InquirerLib.InquirerPy.separator
     :members:
 ```
 
 ## utils
 
 ```{eval-rst}
-.. automodule:: InquirerPy.utils
+.. automodule:: InquirerLib.InquirerPy.utils
     :members:
 ```
 
 ## validator
 
 ```{eval-rst}
-.. automodule:: InquirerPy.validator
+.. automodule:: InquirerLib.InquirerPy.validator
     :members:
 ```
 
@@ -96,28 +96,28 @@
 ### spinner
 
 ```{eval-rst}
-.. automodule:: InquirerPy.containers.spinner
+.. automodule:: InquirerLib.InquirerLib.containers.spinner
     :members:
 ```
 
 ### message
 
 ```{eval-rst}
-.. automodule:: InquirerPy.containers.message
+.. automodule:: InquirerLib.InquirerLib.containers.message
     :members:
 ```
 
 ### validation
 
 ```{eval-rst}
-.. automodule:: InquirerPy.containers.validation
+.. automodule:: InquirerLib.InquirerLib.containers.validation
     :members:
 ```
 
 ### instruction
 
 ```{eval-rst}
-.. automodule:: InquirerPy.containers.instruction
+.. automodule:: InquirerLib.InquirerLib.containers.instruction
     :members:
 ```
 
@@ -126,34 +126,34 @@
 ### simple
 
 ```{eval-rst}
-.. automodule:: InquirerPy.base.simple
+.. automodule:: InquirerLib.InquirerLib.base.simple
     :members:
 ```
 
 ### complex
 
 ```{eval-rst}
-.. automodule:: InquirerPy.base.complex
+.. automodule:: InquirerLib.InquirerLib.base.complex
     :members:
 ```
 
 ### list
 
 ```{eval-rst}
-.. automodule:: InquirerPy.base.list
+.. automodule:: InquirerLib.InquirerLib.base.list
     :members:
 ```
 
 ### control
 
 ```{eval-rst}
-.. automodule:: InquirerPy.base.control
+.. automodule:: InquirerLib.InquirerLib.base.control
     :members:
 ```
 
 ## exceptions
 
 ```{eval-rst}
-.. automodule:: InquirerPy.exceptions
+.. automodule:: InquirerLib.InquirerLib.exceptions
     :members:
 ```

@@ -6,10 +6,10 @@ from prompt_toolkit.enums import EditingMode
 from prompt_toolkit.output import DummyOutput
 from prompt_toolkit.shortcuts.prompt import CompleteStyle
 
-from InquirerPy.exceptions import InvalidArgument
-from InquirerPy.prompts.secret import SecretPrompt
-from InquirerPy.utils import InquirerPyStyle
-from InquirerPy.validator import PasswordValidator
+from InquirerLib.InquirerPy.exceptions import InvalidArgument
+from InquirerLib.InquirerPy.prompts.secret import SecretPrompt
+from InquirerLib.InquirerPy.utils import InquirerPyStyle
+from InquirerLib.InquirerPy.validator import PasswordValidator
 from tests.style import get_sample_style
 
 from tests.prompts.pipe_input import get_pipe_input
@@ -104,11 +104,11 @@ class TestSecret(unittest.TestCase):
             ],
         )
 
-    @patch("InquirerPy.prompts.input.SimpleLexer")
-    @patch("InquirerPy.prompts.secret.SecretPrompt._get_prompt_message")
-    @patch("InquirerPy.base.simple.Style.from_dict")
-    @patch("InquirerPy.base.simple.KeyBindings")
-    @patch("InquirerPy.prompts.input.PromptSession")
+    @patch("InquirerLib.InquirerPy.prompts.input.SimpleLexer")
+    @patch("InquirerLib.InquirerPy.prompts.secret.SecretPrompt._get_prompt_message")
+    @patch("InquirerLib.InquirerPy.base.simple.Style.from_dict")
+    @patch("InquirerLib.InquirerPy.base.simple.KeyBindings")
+    @patch("InquirerLib.InquirerPy.prompts.input.PromptSession")
     def test_callable_called(
         self,
         MockedSession,

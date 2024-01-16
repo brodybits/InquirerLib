@@ -1,6 +1,6 @@
-from InquirerPy import prompt
-from InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
-from InquirerPy.validator import EmptyInputValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
+from InquirerLib.InquirerPy.validator import EmptyInputValidator
 
 questions = [
     {

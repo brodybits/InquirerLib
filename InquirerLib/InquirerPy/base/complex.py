@@ -9,9 +9,9 @@ from prompt_toolkit.filters.base import Condition, FilterOrBool
 from prompt_toolkit.key_binding.key_bindings import KeyHandlerCallable
 from prompt_toolkit.keys import Keys
 
-from InquirerPy.base.simple import BaseSimplePrompt
-from InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.base.simple import BaseSimplePrompt
+from InquirerLib.InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
+from InquirerLib.InquirerPy.utils import (
     InquirerPySessionResult,
     InquirerPyStyle,
     InquirerPyValidate,
@@ -42,11 +42,11 @@ class BaseComplexPrompt(BaseSimplePrompt):
         it only contains the necessary attributes and helper functions to be consumed.
 
     Note:
-        Use :class:`~InquirerPy.base.BaseListPrompt` to create a complex list prompt which involves multiple choices. It has
+        Use :class:`~InquirerLib.InquirerPy.base.BaseListPrompt` to create a complex list prompt which involves multiple choices. It has
         more methods and helper function implemented.
 
     See Also:
-        :class:`~InquirerPy.base.BaseListPrompt`
+        :class:`~InquirerLib.InquirerPy.base.BaseListPrompt`
         :class:`~InquirerPy.prompts.fuzzy.FuzzyPrompt`
     """
 

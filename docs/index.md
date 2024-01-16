@@ -1,4 +1,4 @@
-# InquirerPy
+# InquirerLib
 
 ```{include} ../README.md
 :start-after: <!-- start intro -->
@@ -14,12 +14,12 @@ python >= 3.7
 ```
 
 ```
-pip3 install InquirerPy
+pip3 install InquirerLib
 ```
 
 ## Basic Usage
 
-`InquirerPy` provides two types of syntax that you can choose to use: [Classic syntax](#classic-syntax-pyinquirer) and [Alternate Syntax](#alternate-syntax).
+`InquirerLib` provides two types of syntax that you can choose to use: [Classic syntax](#classic-syntax-pyinquirer) and [Alternate Syntax](#alternate-syntax).
 
 ```{Tip}
 For any new users, [Alternate Syntax](#alternate-syntax) is recommended as its more flexible and extensible.
@@ -49,7 +49,7 @@ Optionally provide a `name` key, `prompt` will store the result under the provid
 no `name` key is provided, the index of the question will be used.
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 questions = [
     {"type": "input", "message": "What's your name:", "name": "name"},
@@ -72,7 +72,7 @@ Alternate syntax directly interact with individual `prompt` classes. It's more f
 and also provides IDE type hintings/completions.
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 name = inquirer.text(message="What's your name:").execute()
 fav_lang = inquirer.select(
@@ -90,13 +90,13 @@ Please visit the sidebar on the left.
 
 ## Running Examples
 
-`InquirerPy` provides several examples that you can run and play around.
+`InquirerLib` provides several examples that you can run and play around.
 
 1. Clone the repository
 
 ```
-git clone https://github.com/kazhala/InquirerPy.git
-cd InquirerPy
+git clone https://github.com/brodybits/InquirerLib.git
+cd InquirerLib
 ```
 
 2. Create a Virtual Environment (Recommended)
@@ -184,5 +184,5 @@ pages/color_print.md
 pages/faq.md
 pages/api.md
 pages/changelog.md
-GitHub Repository <https://github.com/kazhala/InquirerPy>
+GitHub Repository <https://github.com/brodybits/InquirerLib>
 ```

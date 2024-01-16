@@ -5,9 +5,9 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, cast
 
 from prompt_toolkit.layout.controls import FormattedTextControl
 
-from InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
-from InquirerPy.separator import Separator
-from InquirerPy.utils import InquirerPyListChoices, InquirerPySessionResult
+from InquirerLib.InquirerPy.exceptions import InvalidArgument, RequiredKeyNotFound
+from InquirerLib.InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.utils import InquirerPyListChoices, InquirerPySessionResult
 
 __all__ = ["Choice", "InquirerPyUIListControl"]
 

@@ -5,10 +5,10 @@ from typing import Any, Callable, List, Optional
 from prompt_toolkit.filters.base import Condition
 from prompt_toolkit.keys import Keys
 
-from InquirerPy.base.complex import BaseComplexPrompt
-from InquirerPy.base.control import InquirerPyUIListControl
-from InquirerPy.separator import Separator
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.base.complex import BaseComplexPrompt
+from InquirerLib.InquirerPy.base.control import InquirerPyUIListControl
+from InquirerLib.InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.utils import (
     InquirerPyKeybindings,
     InquirerPyMessage,
     InquirerPySessionResult,
@@ -133,7 +133,7 @@ class BaseListPrompt(BaseComplexPrompt):
     def content_control(self) -> InquirerPyUIListControl:
         """Get the content controller object.
 
-        Needs to be an instance of :class:`~InquirerPy.base.control.InquirerPyUIListControl`.
+        Needs to be an instance of :class:`~InquirerLib.InquirerPy.base.control.InquirerPyUIListControl`.
 
         Each :class:`.BaseComplexPrompt` requires a `content_control` to display custom
         contents for the prompt.

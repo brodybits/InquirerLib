@@ -1,7 +1,7 @@
 # Environment Variables
 
 ```{tip}
-If you make calls to `InquirerPy` multiple times with a lot of customisation, you can consider utilising ENV variables.
+If you make calls to `InquirerLib` multiple times with a lot of customisation, you can consider utilising ENV variables.
 ```
 
 Several options can be configured via ENV variables.
@@ -22,8 +22,8 @@ ENV -> `style` parameter -> default style
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
-from InquirerPy import get_style
+from InquirerLib import prompt
+from InquirerLib import get_style
 
 # before
 result = prompt(questions=[{"type": "confirm", "message": "Confirm?"}], style={"questionmark": "#ffffff"})
@@ -40,8 +40,8 @@ result = prompt(questions=[{"type": "confirm", "message": "Confirm?"}])
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
-from InquirerPy import get_style
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib import get_style
 
 # before
 result = inquirer.confirm(message="Confirm?", style=get_style({"questionmark": "#ffffff"})).execute()
@@ -94,7 +94,7 @@ ENV -> `vi_mode` parameter
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 # before
 result = prompt(questions=[{"type": "input", "message": "Name:"}], vi_mode=True)
@@ -111,7 +111,7 @@ result = prompt(questions=[{"type": "input", "message": "Name:"}])
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 # before
 result = inquirer.text(message="Name:", vi_mode=True).execute()
@@ -127,7 +127,7 @@ result = inquirer.text(message="Name").execute()
 ### Mapping
 
 ```{note}
-The value of `INQUIRERPY_VI_MODE` does not matter, as long as its a string longer than 0, `InquirerPy` will set `vi_mode=True`.
+The value of `INQUIRERPY_VI_MODE` does not matter, as long as its a string longer than 0, `InquirerLib` will set `vi_mode=True`.
 ```
 
 | parameter      | ENV                |
@@ -151,7 +151,7 @@ ENV -> `raise_keyboard_interrupt` parameter
   <summary>Classic Syntax</summary>
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 # before
 result = prompt(questions=[{"type": "secret", "message": "Password:"}], raise_keyboard_interrupt=False)
@@ -168,7 +168,7 @@ result = prompt(questions=[{"type": "secret", "message": "Password:"}])
   <summary>Alternate Syntax</summary>
 
 ```python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 # before
 result = inquirer.text(message="Name:", vi_mode=True).execute(raise_keyboard_interrupt=False)
@@ -185,7 +185,7 @@ result = inquirer.text(message="Name").execute()
 
 ```{note}
 The value of `INQUIRERPY_NO_RAISE_KBI` does not matter, as long as its a string longer than 0,
-InquirerPy will not raise {class}`KeyboardInterrupt` when user hit `ctrl-c`.
+InquirerLib will not raise {class}`KeyboardInterrupt` when user hit `ctrl-c`.
 ```
 
 | parameter                        | ENV                     |

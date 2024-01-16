@@ -38,22 +38,22 @@ expansion key or navigation key.
 ```
 
 ```{tip}
-It is recommended to use {class}`~InquirerPy.prompts.expand.ExpandChoice` to create choices for expand prompt.
+It is recommended to use {class}`~InquirerLib.prompts.expand.ExpandChoice` to create choices for expand prompt.
 
 However if you prefer {class}`dict` choices, in addition to the 2 required keys `name` and `value`, an additional
 key called `key` is also required. The value from `key` should be a single char and will be binded to the choice. Pressing
 the value will jump to the choice.
 ```
 
-For this specific prompt, a dedicated class {class}`~InquirerPy.prompts.expand.ExpandChoice` is created.
+For this specific prompt, a dedicated class {class}`~InquirerLib.prompts.expand.ExpandChoice` is created.
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.expand.ExpandChoice
+.. autoclass:: InquirerLib.InquirerLib.prompts.expand.ExpandChoice
     :noindex:
 ```
 
 ```{code-block}
-from InquirerPy.prompts.expand import ExpandChoice
+from InquirerLib.InquirerLib.prompts.expand import ExpandChoice
 
 choices = [
     ExpandChoice("Apple", key="a"),
@@ -118,7 +118,7 @@ If you would like to have a different key for expansion or help message, you can
 The `expand_help` parameter accepts value that's an instance of `ExpandHelp`.
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.expand.ExpandHelp
+.. autoclass:: InquirerLib.InquirerLib.prompts.expand.ExpandHelp
     :noindex:
 ```
 
@@ -128,8 +128,8 @@ The following example will change the expansion key to `o` and the help message 
   <summary>Classic Syntax (PyInquirer)</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
-from InquirerPy.prompts.expand import ExpandHelp
+from InquirerLib import prompt
+from InquirerLib.InquirerLib.prompts.expand import ExpandHelp
 
 questions = [
     {
@@ -149,8 +149,8 @@ result = prompt(questions=questions)
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
-from InquirerPy.prompts.expand import ExpandHelp
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerLib.prompts.expand import ExpandHelp
 
 result = inquirer.expand(
     message="Select one:",
@@ -164,6 +164,6 @@ result = inquirer.expand(
 ## Reference
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.expand.ExpandPrompt
+.. autoclass:: InquirerLib.InquirerLib.prompts.expand.ExpandPrompt
     :noindex:
 ```

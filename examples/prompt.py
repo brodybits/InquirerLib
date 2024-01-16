@@ -1,5 +1,5 @@
-from InquirerPy import prompt
-from InquirerPy.validator import NumberValidator
+from InquirerLib import prompt
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 questions = [
     {

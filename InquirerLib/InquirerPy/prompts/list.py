@@ -16,15 +16,15 @@ from prompt_toolkit.layout.layout import Layout
 from prompt_toolkit.validation import ValidationError
 from prompt_toolkit.widgets.base import Frame
 
-from InquirerPy.base import InquirerPyUIListControl
-from InquirerPy.base.complex import FakeDocument
-from InquirerPy.base.list import BaseListPrompt
-from InquirerPy.containers.instruction import InstructionWindow
-from InquirerPy.containers.message import MessageWindow
-from InquirerPy.containers.validation import ValidationFloat
-from InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
-from InquirerPy.separator import Separator
-from InquirerPy.utils import (
+from InquirerLib.InquirerPy.base import InquirerPyUIListControl
+from InquirerLib.InquirerPy.base.complex import FakeDocument
+from InquirerLib.InquirerPy.base.list import BaseListPrompt
+from InquirerLib.InquirerPy.containers.instruction import InstructionWindow
+from InquirerLib.InquirerPy.containers.message import MessageWindow
+from InquirerLib.InquirerPy.containers.validation import ValidationFloat
+from InquirerLib.InquirerPy.enum import INQUIRERPY_POINTER_SEQUENCE
+from InquirerLib.InquirerPy.separator import Separator
+from InquirerLib.InquirerPy.utils import (
     InquirerPyDefault,
     InquirerPyKeybindings,
     InquirerPyListChoices,
@@ -129,10 +129,10 @@ class ListPrompt(BaseListPrompt):
         invalid_message: Error message to display when user input is invalid.
             Refer to :ref:`pages/validator:Validator` documentation for more details.
         transformer: A function which performs additional transformation on the value that gets printed to the terminal.
-            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            Different than `filter` parameter, this is only visual effect and won’t affect the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:transformer` documentation for more details.
         filter: A function which performs additional transformation on the result.
-            This affects the actual value returned by :meth:`~InquirerPy.base.simple.BaseSimplePrompt.execute`.
+            This affects the actual value returned by :meth:`~InquirerLib.InquirerPy.base.simple.BaseSimplePrompt.execute`.
             Refer to :ref:`pages/dynamic:filter` documentation for more details.
         height: Preferred height of the prompt.
             Refer to :ref:`pages/height:Height` documentation for more details.
@@ -159,7 +159,7 @@ class ListPrompt(BaseListPrompt):
         session_result: Used internally for :ref:`index:Classic Syntax (PyInquirer)`.
 
     Examples:
-        >>> from InquirerPy import inquirer
+        >>> from InquirerLib.InquirerPy import inquirer
         >>> result = inquirer.select(message="Select one:", choices=[1, 2, 3]).execute()
         >>> print(result)
         1

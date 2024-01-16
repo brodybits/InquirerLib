@@ -78,7 +78,7 @@ to answer the question with True/False.
   <summary>Classic Syntax (PyInquirer)</summary>
 
 ```{code-block} python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 questions = [
   {
@@ -100,7 +100,7 @@ result = prompt(questions=questions)
   <summary>Alternate Syntax</summary>
 
 ```{code-block} python
-from InquirerPy import inquirer
+from InquirerLib.InquirerPy import inquirer
 
 inquirer.confirm(
     message="Proceed?",
@@ -136,6 +136,6 @@ If `default` is `True`, the `confirm_letter` is capitalised.
 ## Reference
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.confirm.ConfirmPrompt
+.. autoclass:: InquirerLib.InquirerLib.prompts.confirm.ConfirmPrompt
     :noindex:
 ```

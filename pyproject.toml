@@ -1,12 +1,10 @@
 [tool.poetry]
-name = "InquirerPy"
-version = "0.3.4"
-description = "Python port of Inquirer.js (A collection of common interactive command-line user interfaces)"
-authors = ["Kevin Zhuang <kevin7441@gmail.com>"]
-maintainers = ["Kevin Zhuang <kevin7441@gmail.com>"]
+name = "InquirerLib"
+version = "0.0.0"
+description = "An updated fork of InquirerPy - Python port of Inquirer.js (A collection of common interactive command-line user interfaces)"
+authors = ["Various"]
 readme = "README.md"
-repository = "https://github.com/kazhala/InquirerPy"
-documentation = "https://inquirerpy.readthedocs.io"
+repository = "https://github.com/brodybits/InquirerLib"
 license = "MIT"
 keywords=["cli", "prompt-toolkit", "commandline", "inquirer", "development"]
 classifiers = [
@@ -20,15 +18,18 @@ classifiers = [
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Topic :: Software Development",
   "Topic :: Software Development :: User Interfaces",
   "Topic :: Software Development :: Libraries",
   "Topic :: Software Development :: Libraries :: Application Frameworks",
 ]
 packages = [
-  {include = "InquirerPy"}
+  {include = "InquirerLib"}
 ]
-include = ["InquirerPy/py.typed"]
+include = ["InquirerLib/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -60,7 +61,7 @@ add-ignore = "D107"
 match_dir = "^(?!(example)).*"
 
 [tool.coverage.run]
-source = ["InquirerPy"]
+source = ["InquirerLib"]
 
 [tool.coverage.report]
 ignore_errors = true

@@ -1,5 +1,5 @@
-from InquirerPy import inquirer
-from InquirerPy.validator import NumberValidator
+from InquirerLib.InquirerPy import inquirer
+from InquirerLib.InquirerPy.validator import NumberValidator
 
 
 def main():

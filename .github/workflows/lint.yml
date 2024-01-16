@@ -23,7 +23,7 @@ jobs:
       - name: Install pyright
         run: npm install -g pyright
       - name: Pyright check
-        run: poetry run pyright InquirerPy
+        run: poetry run pyright InquirerLib
 
   pre-commit:
     runs-on: ubuntu-latest

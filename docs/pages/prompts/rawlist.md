@@ -79,6 +79,6 @@ The `default` parameter for rawlist can be three types of values:
 ## Reference
 
 ```{eval-rst}
-.. autoclass:: InquirerPy.prompts.rawlist.RawlistPrompt
+.. autoclass:: InquirerLib.InquirerLib.prompts.rawlist.RawlistPrompt
     :noindex:
 ```

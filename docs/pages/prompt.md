@@ -13,13 +13,13 @@ This document is irrelevant if you intend to use the {ref}`index:Alternate Synta
 It's recommended to use {ref}`pages/inquirer:inquirer` over [prompt](#prompt) for new users.
 ```
 
-This page documents the param and usage of the {func}`~InquirerPy.resolver.prompt` function.
+This page documents the param and usage of the {func}`~InquirerLib.InquirerPy.resolver.prompt` function.
 It's the entry point for {ref}`index:Classic Syntax (PyInquirer)`.
 
 ## Synchronous execution
 
 ```{eval-rst}
-.. autofunction:: InquirerPy.resolver.prompt
+.. autofunction:: InquirerLib.InquirerPy.resolver.prompt
     :noindex:
 ```
 
@@ -41,7 +41,7 @@ Union[List[Dict[str, Any]], Dict[str, Any]]
 A {class}`list` of question to ask.
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 questions = [
     {
@@ -60,7 +60,7 @@ result = prompt(questions=questions)
 If there's only one [question](#question), you can also just provide a {class}`dict` instead of a {class}`list` of {class}`dict`.
 
 ```python
-from InquirerPy import prompt
+from InquirerLib import prompt
 
 result = prompt(questions={"type": "input", "message": "Enter your name:"})
 ```
@@ -122,14 +122,14 @@ for their specific options/parameters.
 ## Asynchronous execution
 
 ```{eval-rst}
-.. autofunction:: InquirerPy.resolver.prompt_async
+.. autofunction:: InquirerLib.InquirerPy.resolver.prompt_async
     :noindex:
 ```
 
 ```{code-block} python
 import asyncio
 
-from InquirerPy import inquirer, prompt_async
+from InquirerLib.InquirerPy import inquirer, prompt_async
 
 
 async def main():

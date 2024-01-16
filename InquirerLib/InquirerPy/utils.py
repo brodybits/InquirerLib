@@ -21,12 +21,12 @@ from prompt_toolkit.formatted_text import FormattedText
 from prompt_toolkit.styles import Style
 from prompt_toolkit.validation import Validator
 
-from InquirerPy.exceptions import InvalidArgument
+from InquirerLib.InquirerPy.exceptions import InvalidArgument
 
 if TYPE_CHECKING:
     from prompt_toolkit.filters.base import FilterOrBool
 
-    from InquirerPy.base.control import Choice
+    from InquirerLib.InquirerPy.base.control import Choice
 
 __all__ = [
     "get_style",
@@ -95,8 +95,8 @@ def get_style(
         An instance of :class:`.InquirerPyStyle`.
 
     Examples:
-        >>> from InquirerPy import get_style
-        >>> from InquirerPy import inquirer
+        >>> InquirerLib import get_style
+        >>> InquirerLib import inquirer
         >>> style = get_style({"questionmark": "#ffffff", "answer": "#000000"}, style_override=False)
         >>> result = inquirer.confirm(message="Confirm?", style=style).execute()
     """

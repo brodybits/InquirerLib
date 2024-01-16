@@ -2,13 +2,14 @@ import asyncio
 import unittest
 from unittest.mock import patch
 
-from prompt_toolkit.input.defaults import create_pipe_input
+# from prompt_toolkit.input.defaults import create_pipe_input
+from prompt_toolkit.input.posix_pipe import _Pipe, PosixPipeInput
 from prompt_toolkit.output import DummyOutput
 from prompt_toolkit.shortcuts.prompt import PromptSession
 
-from InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
-from InquirerPy.prompts.confirm import ConfirmPrompt
-from InquirerPy.utils import InquirerPyStyle
+from InquirerLib.InquirerPy.enum import INQUIRERPY_KEYBOARD_INTERRUPT
+from InquirerLib.InquirerPy.prompts.confirm import ConfirmPrompt
+from InquirerLib.InquirerPy.utils import InquirerPyStyle
 
 from tests.prompts.pipe_input import get_pipe_input
 
@@ -236,10 +237,10 @@ class TestConfirmPrompt(unittest.TestCase):
             ],
         )
 
-    @patch("InquirerPy.prompts.confirm.ConfirmPrompt._get_prompt_message")
-    @patch("InquirerPy.base.simple.Style.from_dict")
-    @patch("InquirerPy.base.simple.KeyBindings")
-    @patch("InquirerPy.prompts.confirm.PromptSession")
+    @patch("InquirerLib.InquirerPy.prompts.confirm.ConfirmPrompt._get_prompt_message")
+    @patch("InquirerLib.InquirerPy.base.simple.Style.from_dict")
+    @patch("InquirerLib.InquirerPy.base.simple.KeyBindings")
+    @patch("InquirerLib.InquirerPy.prompts.confirm.PromptSession")
     def test_callable_called(
         self, MockedSession, MockedKeyBindings, MockedStyle, mocked_message
     ):

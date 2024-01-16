@@ -1,6 +1,6 @@
 import unittest
 
-from InquirerPy.containers.instruction import InstructionWindow
+from InquirerLib.InquirerPy.containers.instruction import InstructionWindow
 
 
 class TestInstructionWindow(unittest.TestCase):
