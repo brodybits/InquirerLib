@@ -10,7 +10,9 @@ sphinx:
 
 python:
   install:
+    # Using docs/requirements.txt which *should* use recent dependencies to build docs
+    # FOR FUTURE CONSIDERATION: REMOVE in favor of adding extra_requirements: [docs] back
+    # into to install: method configuration below, once poetry.lock is properly updated.
+    - requirements: docs/requirements.txt
     - method: pip
       path: .
-      extra_requirements:
-        - docs
