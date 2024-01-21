@@ -1,8 +1,8 @@
 import os
 import sys
 
-# XXX TODO: DEFER THIS CHANGE TO PR #2
-# sys.path.insert(0, os.path.abspath("."))
+# NOTE: This code SHOULD NOT BE NEEDED - SEE PR #2
+sys.path.insert(0, os.path.abspath("."))
 
 project = "InquirerLib"
 copyright = "2021, Kevin Zhuang; 2024-present Christopher J. Brody"
