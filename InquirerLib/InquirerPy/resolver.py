@@ -83,6 +83,7 @@ def _get_question(
 
 async def prompt_async(
     questions: InquirerPyQuestions,
+    *,
     style: Optional[Dict[str, str]] = None,
     vi_mode: bool = False,
     raise_keyboard_interrupt: bool = True,
@@ -126,6 +127,7 @@ async def prompt_async(
 
 def prompt(
     questions: InquirerPyQuestions,
+    *,
     style: Optional[Dict[str, str]] = None,
     vi_mode: bool = False,
     raise_keyboard_interrupt: bool = True,
@@ -141,7 +143,7 @@ def prompt(
         style: A :class:`dict` containing the style specification for the prompt. Refer to :ref:`pages/style:Style` for more info.
         vi_mode: Use vim keybindings for the prompt instead of the default emacs keybindings.
             Refer to :ref:`pages/kb:Keybindings` for more info.
-        raise_keyboard_interrupt: Raise the :class:`KeyboardInterrupt` exception when `ctrl-c` is pressed. If false, the result
+        raise_keyboard_interrupt: [DEPRECATED & SUBJECT TO CHANGE] Raise the :class:`KeyboardInterrupt` exception when `ctrl-c` is pressed. If false, the result
             will be `None` and the question is skipped.
         keybindings: List of custom :ref:`pages/kb:Keybindings` to apply. Refer to documentation for more info.
         style_override: Override all default styles. When providing any style customisation, all default styles are removed when this is True.
