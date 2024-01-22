@@ -54,7 +54,9 @@ class InquirerPyStyle(NamedTuple):
     dict: Dict[str, str]
 
 
-InquirerPySessionResult = Dict[Union[str, int], Optional[Union[str, bool, List[Any]]]]
+ResultKey = Union[str, int]
+ResultValue = Union[str, bool, List[Any]]
+InquirerPySessionResult = Dict[ResultKey, ResultValue]
 InquirerPyChoice = Union[List[Any], List["Choice"], List[Dict[str, Any]]]
 InquirerPyListChoices = Union[
     Callable[["InquirerPySessionResult"], InquirerPyChoice],
