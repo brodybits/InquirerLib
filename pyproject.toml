@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "InquirerLib"
-version = "0.0.1"
+version = "0.0.2.dev"
 description = "An updated fork of InquirerPy - Python port of Inquirer.js (A collection of common interactive command-line user interfaces)"
 authors = ["Various"]
 readme = "README.md"

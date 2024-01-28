@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath("."))
 project = "InquirerLib"
 copyright = "2021, Kevin Zhuang; 2024-present Christopher J. Brody"
 author = "Kevin Zhuang; Christopher J. Brody"
-version = "0.0.1"
+version = "0.0.2.dev"
 release = version
 
 extensions = [
