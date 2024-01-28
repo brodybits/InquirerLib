@@ -48,7 +48,9 @@ python >= 3.7
 
 Some functions are exported directly using `from InquirerLib`; other functions and all exported objects are within `InquirerLib.InquirerPy` namespace.
 
-**[Documentation for InquirerPy](https://inquirerpy.readthedocs.io/)** applies with these updated imports.
+The optional arguments for `prompt` and `prompt_async` are now keyword arguments, with `raise_keyboard_interrupt` (which defaults to `True`) now deprecated. Rationale is to support a possible easier prompt API in the future - see DRAFT RFC PR: <https://github.com/brodybits/InquirerLib/pull/3>
+
+**[Documentation for InquirerPy](https://inquirerpy.readthedocs.io/)** applies with these updated imports and optional arguments for `prompt` and `prompt_async` as now keyword arguments.
 
 Note that importing from `InquirerLib.InquirerPy.inquirer` is DEPRECATED, as documented below.
 
