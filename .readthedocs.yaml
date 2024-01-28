@@ -6,11 +6,15 @@ build:
     python: "3.12"
 
 sphinx:
-  configuration: docs/config.py
+  configuration: docs/conf.py
 
 python:
   install:
+    # Using docs/requirements.txt which *should* use recent dependencies to build docs
+    # FOR FUTURE CONSIDERATION:
+    # REMOVE docs/requirements.txt in favor of adding extra_requirements: [docs]
+    # back into to install method configuration below, once doc tools are updated in
+    # pyproject.toml
+    - requirements: docs/requirements.txt
     - method: pip
       path: .
-      extra_requirements:
-        - docs
