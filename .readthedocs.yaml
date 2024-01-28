@@ -11,8 +11,9 @@ sphinx:
 python:
   install:
     # Using docs/requirements.txt which *should* use recent dependencies to build docs
-    # FOR FUTURE CONSIDERATION: REMOVE in favor of adding extra_requirements: [docs] back
-    # into to install: method configuration below, once doc tools are updated in: pyproject.toml
+    # FOR FUTURE CONSIDERATION: REMOVE in favor of adding extra_requirements: [docs]
+    # back into to install method configuration below, once doc tools are updated in:
+    # pyproject.toml
     - requirements: docs/requirements.txt
     - method: pip
       path: .
