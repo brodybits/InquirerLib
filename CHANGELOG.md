@@ -2,6 +2,13 @@
 
 Notable changes are documented in this file.
 
+## InquirerLib 0.0.1
+
+- start InquirerLib fork
+- include multiple PRs propsed to original InquirerPy
+
+# Original InquirerPy CHANGELOG
+
 ## 0.3.4 (28/06/22)
 
 ## 0.3.3 (04/02/2022)
