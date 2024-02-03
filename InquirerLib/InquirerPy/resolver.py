@@ -16,6 +16,8 @@ from InquirerLib.InquirerPy.prompts.number import NumberPrompt
 from InquirerLib.InquirerPy.prompts.rawlist import RawlistPrompt
 from InquirerLib.InquirerPy.prompts.secret import SecretPrompt
 from InquirerLib.InquirerPy.utils import (
+    ResultKey,
+    ResultValue,
     InquirerPyKeybindings,
     InquirerPyQuestions,
     InquirerPySessionResult,
@@ -130,10 +132,11 @@ def prompt(
     *,
     style: Optional[Dict[str, str]] = None,
     vi_mode: bool = False,
-    raise_keyboard_interrupt: bool = True,
+    raise_keyboard_interrupt: bool = False,
     keybindings: Optional[InquirerPyKeybindings] = None,
     style_override: bool = True,
-) -> InquirerPySessionResult:
+    raise_system_exit: bool = True,  # almost equivalent to calling sys.exit()
+) -> Dict[ResultKey, ResultValue]:
     """Classic syntax entrypoint to create a prompt session.
 
     Resolve user provided list of questions, display prompts and get the results.
@@ -208,7 +211,7 @@ def prompt(
                 "message": message,
                 "style": question_style,
                 "vi_mode": vi_mode,
-                "raise_keyboard_interrupt": raise_keyboard_interrupt,
+                "raise_keyboard_interrupt": raise_keyboard_interrupt | raise_system_exit,
                 "session_result": result,
                 "keybindings": {**keybindings, **question.pop("keybindings", {})},
             }
@@ -217,5 +220,10 @@ def prompt(
             ).execute()
         except KeyError:
             raise RequiredKeyNotFound
+        except KeyboardInterrupt:
+            if raise_system_exit:
+                raise SystemExit from None
+            else:
+                raise
 
     return result
